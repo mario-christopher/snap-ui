@@ -84,7 +84,7 @@ export const flightReviewNext_Click = async (id: string) => {
     method: 'snap_updateInterface',
     params: {
       id,
-      ui: <Process waitMessage='Hello there'/>,
+      ui: <Process />,
     },
   });
 
