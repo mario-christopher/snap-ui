@@ -57,12 +57,14 @@ export const History: SnapComponent<Props> = ({ snapState }) => {
       </Box>
       <Divider></Divider>
       <Box>
-        <Button name={HistoryButtons.Prev} disabled={firstPage}>
-          Prev Page
-        </Button>
-        <Button name={HistoryButtons.Next} disabled={lastPage}>
-          Next Page
-        </Button>
+        <Box direction="horizontal" alignment='center'>
+          <Button name={HistoryButtons.Prev} disabled={firstPage}>
+            Prev Page
+          </Button>
+          <Button name={HistoryButtons.Next} disabled={lastPage}>
+            Next Page
+          </Button>
+        </Box>
         <Divider></Divider>
         <Button name={HistoryButtons.Back}>Home</Button>
       </Box>

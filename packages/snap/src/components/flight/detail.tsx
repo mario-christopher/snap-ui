@@ -72,8 +72,11 @@ export const FlightDetail: SnapComponent<Props> = ({ errors, snapState }) => {
         </Field>
       </Form>
       <Divider></Divider>
-      <Button name={FlightDetailButtons.Prev}>Prev</Button>
-      <Button name={FlightDetailButtons.Next}>Next</Button>
+
+      <Box direction="horizontal" alignment="center">
+        <Button name={FlightDetailButtons.Prev}>Prev</Button>
+        <Button name={FlightDetailButtons.Next}>Next</Button>
+      </Box>
 
       {errors && errors.length > 0 ? (
         <Box>

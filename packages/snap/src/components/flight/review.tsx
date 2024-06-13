@@ -57,8 +57,11 @@ export const FlightReview: SnapComponent<Props> = ({ snapState }) => {
       </Row>
 
       <Divider></Divider>
-      <Button name={FlightReviewButtons.Prev}>Prev</Button>
-      <Button name={FlightReviewButtons.Next}>Next</Button>
+
+      <Box direction="horizontal" alignment="center">
+        <Button name={FlightReviewButtons.Prev}>Prev</Button>
+        <Button name={FlightReviewButtons.Next}>Next</Button>
+      </Box>
     </Box>
   );
 };
