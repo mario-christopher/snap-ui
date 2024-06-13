@@ -3635,17 +3635,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@metamask/snaps-sdk@npm:4.4.1, @metamask/snaps-sdk@npm:^4.1.0, @metamask/snaps-sdk@npm:^4.4.0, @metamask/snaps-sdk@npm:^4.4.1":
-  version: 4.4.1
-  resolution: "@metamask/snaps-sdk@npm:4.4.1"
+"@metamask/snaps-sdk@npm:5.0.0":
+  version: 5.0.0
+  resolution: "@metamask/snaps-sdk@npm:5.0.0"
   dependencies:
     "@metamask/key-tree": ^9.1.1
     "@metamask/providers": ^17.0.0
     "@metamask/rpc-errors": ^6.2.1
     "@metamask/utils": ^8.3.0
-    fast-xml-parser: ^4.3.4
     superstruct: ^1.0.3
-  checksum: 29dfc36821e77d033ddc1b8f1b8924b4880aca41a25e1767741b50659990a79d3026f3975613090342e98d0cf8d876a0e003edb23ff39d2927dc6473d5c441f9
+  checksum: 80b60b4fab9615ca5cea86c06f7102dd60ed42a8e7568a48a5a291f66eaba1143d449e6bd3f5a16dff53dcc7ff242adbd3968c3dc7669265a4a941a397f1c0a2
   languageName: node
   linkType: hard
 
@@ -3660,6 +3659,20 @@ __metadata:
     fast-xml-parser: ^4.3.4
     superstruct: ^1.0.3
   checksum: a95f10403b50be7b6b35b49eef3724eabb8ef0763db6434e6c77a6d56fb18deab928764dee2738ee6428e77ea582b3dd71e5cbdb19dfb37389dc4c6d34294891
+  languageName: node
+  linkType: hard
+
+"@metamask/snaps-sdk@npm:^4.1.0, @metamask/snaps-sdk@npm:^4.4.0, @metamask/snaps-sdk@npm:^4.4.1":
+  version: 4.4.1
+  resolution: "@metamask/snaps-sdk@npm:4.4.1"
+  dependencies:
+    "@metamask/key-tree": ^9.1.1
+    "@metamask/providers": ^17.0.0
+    "@metamask/rpc-errors": ^6.2.1
+    "@metamask/utils": ^8.3.0
+    fast-xml-parser: ^4.3.4
+    superstruct: ^1.0.3
+  checksum: 29dfc36821e77d033ddc1b8f1b8924b4880aca41a25e1767741b50659990a79d3026f3975613090342e98d0cf8d876a0e003edb23ff39d2927dc6473d5c441f9
   languageName: node
   linkType: hard
 
@@ -18322,7 +18335,7 @@ __metadata:
     "@metamask/eslint-config-typescript": 12.1.0
     "@metamask/snaps-cli": 6.2.0
     "@metamask/snaps-jest": 8.1.2
-    "@metamask/snaps-sdk": 4.4.1
+    "@metamask/snaps-sdk": 5.0.0
     "@metamask/utils": 8.4.0
     "@typescript-eslint/eslint-plugin": 7.12.0
     "@typescript-eslint/parser": 7.12.0
