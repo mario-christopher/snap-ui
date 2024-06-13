@@ -14,6 +14,7 @@ import { FlightDetail } from './detail';
 import { FlightVoucher } from './voucher';
 import { getState } from '../../state';
 import { Props } from '../../utils';
+import { Process } from '../process';
 
 export enum FlightReviewButtons {
   Prev = 'btnFlightReviewPrev',
@@ -83,7 +84,20 @@ export const flightReviewNext_Click = async (id: string) => {
     method: 'snap_updateInterface',
     params: {
       id,
-      ui: <FlightVoucher />,
+      ui: <Process waitMessage='Hello there'/>,
     },
   });
+
+  await new Promise<void>((resolve) =>
+    setTimeout(async () => {
+      await snap.request({
+        method: 'snap_updateInterface',
+        params: {
+          id,
+          ui: <FlightVoucher />,
+        },
+      });
+      resolve();
+    }, 2000),
+  );
 };
