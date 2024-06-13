@@ -22,12 +22,6 @@ export enum HistoryButtons {
   Next = 'btnHistory_next',
 }
 
-const flightHistory = [
-  { href: 'https://snappy-air.com/snap/Denver', value: 'Denver' },
-  { href: 'https://snappy-air.com/snap/Cancun', value: 'Cancun' },
-  { href: 'https://snappy-air.com/snap/Detroit', value: 'Detroit' },
-];
-
 export const History: SnapComponent<Props> = ({ snapState }) => {
   const pageSize = 5;
   const firstPage = snapState.historyPageNo == 0;
