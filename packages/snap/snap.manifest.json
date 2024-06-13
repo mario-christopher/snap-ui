@@ -1,0 +1,34 @@
+{
+  "version": "0.1.0",
+  "description": "A project showcasing Snap interactive UI.",
+  "proposedName": "Snappy Airlines",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mario-christopher/mm-snap-features.git"
+  },
+  "source": {
+    "shasum": "bPIqlFXKvTlEd7SPmiKGXc3ZRgmjfeEabX2C1VKjVKQ=",
+    "location": {
+      "npm": {
+        "iconPath": "images/snappy-air.svg",
+        "filePath": "dist/bundle.js",
+        "packageName": "snappy-airlines",
+        "registry": "https://registry.npmjs.org/"
+      }
+    }
+  },
+  "initialConnections": {
+    "http://localhost:8000": {}
+  },
+  "initialPermissions": {
+    "snap_dialog": {},
+    "snap_manageState": {},
+    "endowment:lifecycle-hooks": {},
+    "endowment:page-home": {},
+    "endowment:rpc": {
+      "dapps": true,
+      "snaps": false
+    }
+  },
+  "manifestVersion": "0.1"
+}

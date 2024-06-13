@@ -1,0 +1,68 @@
+{
+  "name": "snappy-airlines",
+  "version": "0.1.0",
+  "description": "A project showcasing various Snap features.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mario-christopher/mm-snap-features.git"
+  },
+  "license": "(MIT-0 OR Apache-2.0)",
+  "main": "./dist/bundle.js",
+  "files": [
+    "dist/",
+    "snap.manifest.json"
+  ],
+  "scripts": {
+    "allow-scripts": "yarn workspace root allow-scripts",
+    "build": "mm-snap build",
+    "build:clean": "yarn clean && yarn build",
+    "clean": "rimraf dist",
+    "lint": "yarn lint:eslint && yarn lint:misc --check",
+    "lint:eslint": "eslint . --cache --ext js,ts",
+    "lint:fix": "yarn lint:eslint --fix && yarn lint:misc --write",
+    "lint:misc": "prettier '**/*.json' '**/*.md' '!CHANGELOG.md' --ignore-path .gitignore",
+    "prepublishOnly": "mm-snap manifest",
+    "serve": "mm-snap serve",
+    "start": "mm-snap watch",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@metamask/snaps-sdk": "4.4.1",
+    "@metamask/utils": "8.4.0",
+    "buffer": "6.0.3"
+  },
+  "devDependencies": {
+    "@jest/globals": "29.7.0",
+    "@metamask/auto-changelog": "3.4.4",
+    "@metamask/eslint-config": "12.2.0",
+    "@metamask/eslint-config-jest": "12.1.0",
+    "@metamask/eslint-config-nodejs": "12.1.0",
+    "@metamask/eslint-config-typescript": "12.1.0",
+    "@metamask/snaps-cli": "6.2.0",
+    "@metamask/snaps-jest": "8.1.2",
+    "@typescript-eslint/eslint-plugin": "7.12.0",
+    "@typescript-eslint/parser": "7.12.0",
+    "eslint": "9.4.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-jest": "28.5.0",
+    "eslint-plugin-jsdoc": "48.2.7",
+    "eslint-plugin-n": "17.7.0",
+    "eslint-plugin-prettier": "5.1.3",
+    "eslint-plugin-promise": "6.2.0",
+    "jest": "29.7.0",
+    "prettier": "3.3.0",
+    "prettier-plugin-packagejson": "2.5.0",
+    "rimraf": "5.0.7",
+    "ts-jest": "29.1.4",
+    "typescript": "5.4.5"
+  },
+  "packageManager": "yarn@3.2.1",
+  "engines": {
+    "node": ">=18.6.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
