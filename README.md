@@ -33,3 +33,11 @@ yarn install && yarn start
 The dapp is served from : [localhost:8000](http://localhost:8000/)
 
 The snap is served from : [localhost:8080](http://localhost:8080/)
+
+---
+
+### MetaMask Snaps - Builder Series Calls
+
+You can watch the Video recording describing this repo and its code, and other Snaps related videos on the MetaMask Snap YouTube Channel:
+
+https://youtu.be/Uh53e9hLWZg?si=lB5boGN1Ry1WHt5w
