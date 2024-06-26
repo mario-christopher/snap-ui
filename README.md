@@ -1,5 +1,9 @@
 # Snappy Airlines
 
+<p>
+  <img src="packages/snap/images/snappy-air.svg" width="350" title="hover text">
+</p>
+
 This repository demonstrates some of the new Interactive UI features available in the MetaMask Snaps Platform. 
 Some of the features in this Snap are:
 - [onInstall lifecycle hook](https://docs.metamask.io/snaps/reference/permissions/#endowmentlifecycle-hooks)
