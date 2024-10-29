@@ -51,7 +51,6 @@ export const FlightUploadId: SnapComponent<Props> = ({ errors, snapState }) => {
             })}
           </RadioGroup>
         </Field>
-        {/* The FileInput control has a regression, and may not work as expected in the current SDK version. */}
         <Field>
           <FileInput name={FlightUploadIdForm.FileInput} />
         </Field>

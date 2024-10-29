@@ -46,7 +46,8 @@ export const FlightReview: SnapComponent<Props> = ({ snapState }) => {
         <Text>{`${snapState.booking?.inpFlightNameFirstName} ${snapState.booking?.inpFlightNameLastName}`}</Text>
       </Row>
       <Row label="ID Type">
-        <Text>{idType as string}</Text>
+        {/* <Text>{idType as string}</Text> */}
+        <Value extra={snapState.booking?.fiUploadId?.name} value={idType as string}></Value>
       </Row>
       <Row label="Flight Date">
         <Text>{snapState.booking?.inpFlightDetailDate as string}</Text>
