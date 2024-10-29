@@ -5,6 +5,7 @@ import {
   Row,
   Text,
   Divider,
+  Heading,
 } from '@metamask/snaps-sdk/jsx';
 
 import { HomePage } from './home-page';
@@ -17,6 +18,8 @@ export enum AccountInfoButtons {
 export const AccountInfo: SnapComponent<Props> = ({ snapState }) => {
   return (
     <Box>
+      <Heading>Account Information</Heading>
+      <Divider></Divider>
       <Row label="Customer">
         <Text>{`${snapState.member.firstName} ${snapState.member.lastName}`}</Text>
       </Row>

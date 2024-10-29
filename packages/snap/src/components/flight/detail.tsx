@@ -14,7 +14,7 @@ import {
   Heading,
 } from '@metamask/snaps-sdk/jsx';
 
-import { FlightName } from './name';
+import { FlightUploadId } from './upload-id';
 import { FlightReview } from './review';
 import { Props } from '../../utils';
 import { getFormValue, getState, setState } from '../../state';
@@ -36,7 +36,7 @@ export const FlightDetail: SnapComponent<Props> = ({ errors, snapState }) => {
     <Box>
       <Row label="Step">
         <Text>
-          <Bold>2 of 4</Bold>
+          <Bold>3 of 5</Bold>
         </Text>
       </Row>
       <Divider></Divider>
@@ -99,7 +99,7 @@ export const flightDetailPrev_Click = async (id: string) => {
     method: 'snap_updateInterface',
     params: {
       id,
-      ui: <FlightName snapState={snapState} />,
+      ui: <FlightUploadId snapState={snapState} />,
     },
   });
 };
@@ -143,6 +143,8 @@ export const flightDetailNext_Click = async (id: string) => {
       inpFlightNameFirstName: snapState.booking
         ?.inpFlightNameFirstName as string,
       inpFlightNameLastName: snapState.booking?.inpFlightNameLastName as string,
+      rdoIdType: snapState.booking?.rdoIdType as string,
+      fiUploadId: snapState.booking?.fiUploadId as any,
       inpFlightDetailDate: formValue[FlightDetailForm.InputDate],
       selectFlightDetailFrom: formValue[FlightDetailForm.SelectFrom],
       selectFlightDetailTo: formValue[FlightDetailForm.SelectTo],

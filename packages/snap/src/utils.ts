@@ -1,9 +1,13 @@
 import { FlightDetailForm } from "./components/flight/detail";
 import { FlightNameForm } from "./components/flight/name";
+import { FlightUploadIdForm } from "./components/flight/upload-id";
 
 export type Booking = {
   [FlightNameForm.InputFirstName]: string;
   [FlightNameForm.InputLastName]: string;
+
+  [FlightUploadIdForm.UploadIdType]: string;
+  [FlightUploadIdForm.FileInput]: any;
 
   [FlightDetailForm.InputDate]: string;
   [FlightDetailForm.SelectFrom]: string;
@@ -21,6 +25,7 @@ export type Member = {
 export type SnapState = {
   member: Member;
   booking?: Booking;
+  idTypes: IDType[],
   airportCodes: AirportCode[];
   flightHistory: Flight[];
   historyPageNo: number;
@@ -33,6 +38,11 @@ export type ErrorProps = {
 export type AirportCode = {
   value: string;
   cityName: string;
+}
+
+export type IDType = {
+  value: string;
+  type: string;
 }
 
 export type Flight = {
@@ -65,6 +75,14 @@ export async function getAirportCodes() {
     { value: "MUM", cityName: "Mumbai" },
     { value: "BRU", cityName: "Brussels" },
   ] as AirportCode[]
+}
+
+export async function getIDTypes() {
+  return [
+    { value: "PASS", type: "Passport" },
+    { value: "DL", type: "Driver's License" },
+    { value: "STU", type: "Student Id" },
+  ] as IDType[]
 }
 
 export async function getFlightHistory() {
