@@ -10,7 +10,7 @@ Some of the features in this Snap are:
 - [onUpdate lifecycle hook](https://docs.metamask.io/snaps/reference/permissions/#endowmentlifecycle-hooks)
 - [Home Page](https://docs.metamask.io/snaps/reference/permissions/#endowmentpage-home)
 - [Custom UI](https://docs.metamask.io/snaps/features/custom-ui/)
-- Dynamic/Interactive UI
+- [Dynamic/Interactive UI](https://docs.metamask.io/snaps/features/custom-ui/interactive-ui/)
 
 MetaMask Snaps is a system that allows anyone to safely expand the capabilities
 of MetaMask. A _snap_ is a program that we run in an isolated environment that
