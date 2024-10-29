@@ -22,7 +22,7 @@ export const FlightVoucher: SnapComponent = () => {
     <Box>
       <Row label="Step">
         <Text>
-          <Bold>4 of 4</Bold>
+          <Bold>5 of 5</Bold>
         </Text>
       </Row>
       <Divider></Divider>

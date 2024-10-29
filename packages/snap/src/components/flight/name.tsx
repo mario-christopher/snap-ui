@@ -13,9 +13,9 @@ import {
 } from '@metamask/snaps-sdk/jsx';
 
 import { HomePage } from '../home-page';
-import { FlightDetail } from './detail';
 import { Props } from '../../utils';
 import { getState, setState, getFormValue } from '../../state';
+import { FlightUploadId } from './upload-id';
 
 export enum FlightNameForm {
   Form = 'frmFlightName',
@@ -33,7 +33,7 @@ export const FlightName: SnapComponent<Props> = ({ errors, snapState }) => {
     <Box>
       <Row label="Step">
         <Text>
-          <Bold>1 of 4</Bold>
+          <Bold>1 of 5</Bold>
         </Text>
       </Row>
       <Divider></Divider>
@@ -109,13 +109,15 @@ export const flightNameNext_Click = async (id: string) => {
     snapState.booking = {
       inpFlightNameFirstName: formValue[FlightNameForm.InputFirstName],
       inpFlightNameLastName: formValue[FlightNameForm.InputLastName],
+      rdoIdType: snapState.booking?.rdoIdType as string,
+      fiUploadId: snapState.booking?.fiUploadId as any,
       inpFlightDetailDate: snapState.booking?.inpFlightDetailDate as string,
       selectFlightDetailFrom: snapState.booking
         ?.selectFlightDetailFrom as string,
       selectFlightDetailTo: snapState.booking?.selectFlightDetailTo as string,
     };
     await setState(snapState);
-    comp = <FlightDetail snapState={snapState} />;
+    comp = <FlightUploadId snapState={snapState} />;
   } else {
     comp = <FlightName errors={errors} snapState={snapState} />;
   }

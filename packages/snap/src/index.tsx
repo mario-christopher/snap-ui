@@ -54,16 +54,19 @@ import {
   flightVoucherHome_Click,
 } from './components/flight/voucher';
 
-import { getAirportCodes, getFlightHistory, getMemberInfo } from './utils';
+import { getIDTypes, getAirportCodes, getFlightHistory, getMemberInfo } from './utils';
 import { setState } from './state';
+import { FlightUploadIdButtons, uploadIdNext_Click, uploadIdPrev_Click } from './components/flight/upload-id';
 
 export const onInstall: OnInstallHandler = async () => {
   const member = await getMemberInfo();
   const airportCodes = await getAirportCodes();
+  const idTypes = await getIDTypes();
   const flightHistory = await getFlightHistory();
 
   await setState({
     member,
+    idTypes,
     airportCodes,
     flightHistory,
     historyPageNo: 0,
@@ -122,6 +125,13 @@ export const onUserInput: OnUserInputHandler = async ({
         break;
       case FlightNameButtons.Next:
         await flightNameNext_Click(id);
+        break;
+
+      case FlightUploadIdButtons.Prev:
+        await uploadIdPrev_Click(id);
+        break;
+      case FlightUploadIdButtons.Next:
+        await uploadIdNext_Click(id);
         break;
 
       case FlightDetailButtons.Prev:

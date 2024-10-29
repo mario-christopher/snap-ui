@@ -53,6 +53,8 @@ export const homePageBookFlight_Click = async (id: string) => {
   snapState.booking = {
     inpFlightNameFirstName: snapState.member.firstName,
     inpFlightNameLastName: snapState.member.lastName,
+    rdoIdType: snapState.idTypes[0]?.value as string,
+    fiUploadId: null,
     inpFlightDetailDate: '06/13/2024',
     selectFlightDetailFrom: snapState.airportCodes[0]?.value as string,
     selectFlightDetailTo: snapState.airportCodes[1]?.value as string,

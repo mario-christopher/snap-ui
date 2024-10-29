@@ -22,6 +22,9 @@ export enum FlightReviewButtons {
 }
 
 export const FlightReview: SnapComponent<Props> = ({ snapState }) => {
+  const idType = snapState.idTypes.find(
+    (id) => id.value == snapState.booking?.rdoIdType,
+  )?.type;
   const fromCity = snapState.airportCodes.find(
     (airport) => airport.value == snapState.booking?.selectFlightDetailFrom,
   )?.cityName;
@@ -33,7 +36,7 @@ export const FlightReview: SnapComponent<Props> = ({ snapState }) => {
     <Box>
       <Row label="Step">
         <Text>
-          <Bold>3 of 4</Bold>
+          <Bold>4 of 5</Bold>
         </Text>
       </Row>
       <Divider></Divider>
@@ -41,6 +44,9 @@ export const FlightReview: SnapComponent<Props> = ({ snapState }) => {
       <Heading>Review your flight information</Heading>
       <Row label="Passenger Name">
         <Text>{`${snapState.booking?.inpFlightNameFirstName} ${snapState.booking?.inpFlightNameLastName}`}</Text>
+      </Row>
+      <Row label="ID Type">
+        <Text>{idType as string}</Text>
       </Row>
       <Row label="Flight Date">
         <Text>{snapState.booking?.inpFlightDetailDate as string}</Text>
@@ -80,6 +86,9 @@ export const flightReviewPrev_Click = async (id: string) => {
 };
 
 export const flightReviewNext_Click = async (id: string) => {
+  const snapState = await getState();
+  console.log("Booking Info", snapState.booking);
+
   await snap.request({
     method: 'snap_updateInterface',
     params: {
